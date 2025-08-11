@@ -17,9 +17,14 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
-    jvm()
-    
+
+    jvm() {
+        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+        compilerOptions {
+            jvmTarget.set(JvmTarget.JVM_11)
+        }
+    }
+
     sourceSets {
         androidMain.dependencies {
             implementation(compose.preview)
