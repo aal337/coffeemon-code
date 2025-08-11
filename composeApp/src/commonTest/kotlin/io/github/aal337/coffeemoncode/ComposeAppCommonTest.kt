@@ -1,4 +1,4 @@
-package dev.aal337.coffeemoncode
+package io.github.aal337.coffeemoncode
 
 import kotlin.test.Test
 import kotlin.test.assertEquals

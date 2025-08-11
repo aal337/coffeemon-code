@@ -1,4 +1,4 @@
-package dev.aal337.coffeemoncode
+package io.github.aal337.coffeemoncode
 
 interface Platform {
     val name: String

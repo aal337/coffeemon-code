@@ -46,11 +46,11 @@ kotlin {
 }
 
 android {
-    namespace = "dev.aal337.coffeemoncode"
+    namespace = "io.github.aal337.coffeemoncode"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "dev.aal337.coffeemoncode"
+        applicationId = "io.github.aal337.coffeemoncode"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -78,11 +78,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "dev.aal337.coffeemoncode.MainKt"
+        mainClass = "io.github.aal337.coffeemoncode.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "dev.aal337.coffeemoncode"
+            packageName = "io.github.aal337.coffeemoncode"
             packageVersion = "1.0.0"
         }
     }

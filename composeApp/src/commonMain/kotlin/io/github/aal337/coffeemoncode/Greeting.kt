@@ -1,4 +1,4 @@
-package dev.aal337.coffeemoncode
+package io.github.aal337.coffeemoncode
 
 class Greeting {
     private val platform = getPlatform()

@@ -1,4 +1,4 @@
-package dev.aal337.coffeemoncode
+package io.github.aal337.coffeemoncode
 
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application

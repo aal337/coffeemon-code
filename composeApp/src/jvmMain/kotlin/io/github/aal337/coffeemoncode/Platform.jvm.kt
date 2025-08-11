@@ -1,4 +1,4 @@
-package dev.aal337.coffeemoncode
+package io.github.aal337.coffeemoncode
 
 class JVMPlatform: Platform {
     override val name: String = "Java ${System.getProperty("java.version")}"
