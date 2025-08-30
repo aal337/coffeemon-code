@@ -124,3 +124,6 @@ captures
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode
 
 !gradle/wrapper/gradle-wrapper.jar
+
+# Firebase Studio
+.idx/
