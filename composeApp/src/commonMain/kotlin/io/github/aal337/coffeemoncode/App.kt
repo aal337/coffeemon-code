@@ -31,6 +31,8 @@ fun App() {
                 .fillMaxSize(),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
+            var seconds: Int? by remember { mutableStateOf(null) }
+            CatchingInterface(seconds)
             Button(onClick = { showContent = !showContent }) {
                 Text("Click me!")
             }
@@ -43,7 +45,41 @@ fun App() {
                     Image(painterResource(Res.drawable.compose_multiplatform), null)
                     Text("Compose: $greeting")
                 }
+                GetTimeInterface()
             }
         }
+    }
+}
+
+@Composable
+@Preview
+fun GetTimeInterface() {
+    var inputFieldText by remember { mutableStateOf("") }
+    val coroutineScope = rememberCoroutineScope()
+
+    TextField(
+        value = inputFieldText,
+        onValueChange = { inputFieldText = it },
+        label = Text("Hackatime username")
+    )
+    Button(onClick = {
+        coroutineScope.launch {
+            seconds = getTimeInSeconds(inputFieldText)
+        }
+    }) {
+        Text("Get time")
+    }
+    if (seconds != null) {
+        Text(seconds.toString())
+    }
+}
+
+@Composable
+fun CatchingInterface(seconds: Int?) {
+    var alreadyCaught by remember { mutableStateOf(0) }
+    Text("Hackatime time: ${seconds ?: 0} seconds")
+    Text("That's ${(seconds ?: 0) / 1800 - alreadyCaught} Coffeemon catchable!")
+    Button(onClick = { alreadyCaught++ }) {
+        Text("Catch one!")
     }
 }
