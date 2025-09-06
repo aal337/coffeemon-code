@@ -77,8 +77,13 @@ fun GetTimeInterface() {
 @Composable
 fun CatchingInterface(seconds: Int?) {
     var alreadyCaught by remember { mutableStateOf(0) }
+    val catchable = (seconds ?: 0) / 1800 - alreadyCaught
+    if (catchable < 0) {
+        Text("You have too many Coffeemon, some will run away!")
+        alreadyCaught += catchable
+    }
     Text("Hackatime time: ${seconds ?: 0} seconds")
-    Text("That's ${(seconds ?: 0) / 1800 - alreadyCaught} Coffeemon catchable!")
+    Text("That's $catchable Coffeemon catchable!")
     Button(onClick = { alreadyCaught++ }) {
         Text("Catch one!")
     }
