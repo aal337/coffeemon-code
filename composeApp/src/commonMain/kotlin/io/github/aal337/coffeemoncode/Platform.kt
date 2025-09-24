@@ -4,7 +4,7 @@ import io.ktor.client.engine.*
 
 interface Platform {
     val name: String
-    val httpEngine: HttpClientEngineFactory
+    val httpEngine: HttpClientEngineFactory<HttpClientEngineConfig>
 }
 
 expect fun getPlatform(): Platform
