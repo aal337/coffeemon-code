@@ -92,6 +92,7 @@ kotlin {
             implementation(libs.kotlinx.coroutinesSwing)
             implementation(libs.ktor.client.apache)
             implementation(libs.kstore.file)
+            implementation("net.harawata:appdirs:1.4.0")
         }
         wasmJsMain.dependencies {
             implementation(libs.ktor.client.js)
