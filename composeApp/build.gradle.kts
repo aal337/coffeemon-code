@@ -90,7 +90,7 @@ kotlin {
         jvmMain.dependencies {
             implementation(compose.desktop.currentOs)
             implementation(libs.kotlinx.coroutinesSwing)
-            implementation(libs.ktor.client.apache)
+            implementation(libs.ktor.client.apache5)
             implementation(libs.kstore.file)
             implementation("net.harawata:appdirs:1.4.0")
         }
