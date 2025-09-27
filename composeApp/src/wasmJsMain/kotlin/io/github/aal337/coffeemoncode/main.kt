@@ -7,6 +7,6 @@ import kotlinx.browser.document
 @OptIn(ExperimentalComposeUiApi::class)
 fun main() {
     ComposeViewport(document.body!!) {
-        App(store = getKStore(dir = "")))
+        App(store = getKStore(dir = ""))
     }
 }
