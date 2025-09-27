@@ -18,13 +18,14 @@ import androidx.compose.ui.Modifier
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import kotlinx.coroutines.launch
+import io.github.xxfast.kstore.KStore
 
 import coffeemoncode.composeapp.generated.resources.Res
 import coffeemoncode.composeapp.generated.resources.compose_multiplatform
 
 @Composable
 @Preview
-fun App() {
+fun App(store: KStore<GameData>) {
     MaterialTheme {
         var showContent by remember { mutableStateOf(false) }
         Column(
