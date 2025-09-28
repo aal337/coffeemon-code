@@ -27,6 +27,7 @@ import coffeemoncode.composeapp.generated.resources.compose_multiplatform
 @Preview
 fun App(store: KStore<GameData>) {
     MaterialTheme {
+        val game = GameMemory(store)
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
@@ -50,7 +51,7 @@ fun App(store: KStore<GameData>) {
                 }
             }
 
-            var inputFieldText by remember { mutableStateOf("")}
+            var inputFieldText by remember { mutableStateOf("") }
             val coroutineScope = rememberCoroutineScope()
 
             TextField(
@@ -60,6 +61,7 @@ fun App(store: KStore<GameData>) {
             )
             Button(onClick = {
                 coroutineScope.launch {
+                    game.username = inputFieldText
                     seconds = getTime(inputFieldText)
                 }
             }) {
@@ -68,15 +70,15 @@ fun App(store: KStore<GameData>) {
             if (seconds != null) {
                 Text(seconds.toString())
             }
-            var alreadyCaught by remember { mutableStateOf(0) }
-            val catchable = (seconds ?: 0) / 1800 - alreadyCaught
+            // var alreadyCaught by remember { mutableStateOf(0) }
+            val catchable = (seconds ?: 0) / 1800 - game.coffeemonNumber ?: 0
             if (catchable < 0) {
                 Text("You have too many Coffeemon, some will run away!")
-                alreadyCaught += catchable
+                game.coffeemonNumber = (game.coffeemonNumber ?: 0) + catchable
             }
             Text("Hackatime time: ${seconds ?: 0} seconds")
             Text("That's $catchable Coffeemon catchable!")
-            Button(onClick = { alreadyCaught++ }) {
+            Button(onClick = { game.coffeemonNumber = (game.coffeemonNumber ?: 0) + 1 }) {
                 Text("Catch one!")
             }
         }
