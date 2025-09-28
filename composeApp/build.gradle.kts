@@ -25,7 +25,7 @@ kotlin {
         iosArm64(),
         // iosSimulatorArm64()
     ).forEach { iosTarget ->
-        iosTarget.binaries.framework(listOf(RELEASE)) {
+        iosTarget.binaries.framework {
             baseName = "CoffeemonCode"
             isStatic = true
         }
@@ -110,7 +110,7 @@ android {
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
-        versionName = "0.1.0"
+        versionName = "1.0"
     }
     packaging {
         resources {
@@ -139,7 +139,7 @@ compose.desktop {
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
             packageName = "io.github.aal337.coffeemoncode"
-            packageVersion = "0.1.0"
+            packageVersion = "1.0.0"
         }
     }
 }
