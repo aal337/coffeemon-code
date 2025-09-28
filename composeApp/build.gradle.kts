@@ -25,8 +25,9 @@ kotlin {
         iosArm64(),
         iosSimulatorArm64()
     ).forEach { iosTarget ->
-        iosTarget.binaries.executable(listOf(RELEASE)) {
+        iosTarget.binaries.framework(listOf(RELEASE)) {
             baseName = "CoffeemonCode"
+            isStatic = true
         }
     }
 
