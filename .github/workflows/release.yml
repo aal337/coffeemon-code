@@ -1,0 +1,27 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  builds:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+      - name: Setup JDK
+        uses: actions/setup-java@v5
+        with:
+          distribution: 'temurin'
+          java-version: '21'
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Build for all platforms
+        run: |
+          ./gradlew build # TODO: change to appropriate task when i'm sure
+      - name: Add artifacts to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file_glob: true
+          file: ssh # TODO: pattern for binaries
