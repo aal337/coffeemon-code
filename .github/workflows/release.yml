@@ -19,7 +19,7 @@ jobs:
         uses: android-actions/setup-android@v3
       - name: Build for all platforms
         run: |
-          ./gradlew build # TODO: change to appropriate task when i'm sure
+          ./gradlew assemble
       - name: Add artifacts to release
         uses: svenstaro/upload-release-action@v2
         with:
