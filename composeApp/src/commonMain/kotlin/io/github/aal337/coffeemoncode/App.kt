@@ -19,10 +19,8 @@ import coffeemoncode.composeapp.generated.resources.compose_multiplatform
 import io.github.xxfast.kstore.KStore
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.resources.painterResource
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
-@Preview
 fun App(store: KStore<GameData>) {
     MaterialTheme {
         val game = GameMemory(store)
@@ -59,7 +57,7 @@ fun App(store: KStore<GameData>) {
             )
             Button(onClick = {
                 coroutineScope.launch {
-                    game.username = inputFieldText
+                    game.setUsername(inputFieldText)
                     seconds = getTime(inputFieldText)
                 }
             }) {
@@ -69,14 +67,15 @@ fun App(store: KStore<GameData>) {
                 Text(seconds.toString())
             }
             // var alreadyCaught by remember { mutableStateOf(0) }
-            val catchable = ((seconds ?: 0) / 1800) - (game.coffeemonNumber ?: 0)
+            var catchable by remember { mutableStateOf(0) }
+            coroutineScope.launch { catchable = ((seconds ?: 0) / 1800) - (game.getCoffeemonNumber() ?: 0) }
             if (catchable < 0) {
                 Text("You have too many Coffeemon, some will run away!")
-                game.coffeemonNumber = (game.coffeemonNumber ?: 0) + catchable
+                coroutineScope.launch { game.setCoffeemonNumber((game.getCoffeemonNumber() ?: 0) + catchable) }
             }
             Text("Hackatime time: ${seconds ?: 0} seconds")
             Text("That's $catchable Coffeemon catchable!")
-            Button(onClick = { game.coffeemonNumber = (game.coffeemonNumber ?: 0) + 1 }) {
+            Button(onClick = { coroutineScope.launch { game.setCoffeemonNumber((game.getCoffeemonNumber() ?: 0) + 1) } }) {
                 Text("Catch one!")
             }
         }

@@ -1,8 +1,7 @@
 package io.github.aal337.coffeemoncode
 
-import kotlinx.serialization.Serializable
-import kotlin.io.*
 import io.github.xxfast.kstore.KStore
+import kotlinx.serialization.Serializable
 
 @Serializable
 data class GameData(val username: String, val seconds: Int, val coffeemonNumber: Int)
@@ -10,16 +9,11 @@ data class GameData(val username: String, val seconds: Int, val coffeemonNumber:
 expect fun getKStore(dir: String): KStore<GameData>
 
 class GameMemory(val store: KStore<GameData>) {
-    var username: String?
-        get() = store.get()?.username
-        set(value) {
-            store.update { it?.copy(username = value) }
-            field = value
-        }
-    var coffeemonNumber: Int?
-        get() = store.get()?.coffeemonNumber
-        set(value) {
-            store.update { it?.copy(coffeemonNumber = value) }
-            field = value
-        }
+    suspend fun setUsername(value: String?) {
+            store.update { it?.copy(username = value ?: "") }
+    }
+    suspend fun getCoffeemonNumber() = store.get()?.coffeemonNumber
+    suspend fun setCoffeemonNumber(value: Int?) {
+        store.update { it?.copy(coffeemonNumber = value ?: 0) }
+    }
 }
