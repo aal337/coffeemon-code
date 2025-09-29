@@ -1,7 +1,12 @@
 package io.github.aal337.coffeemoncode
 
 import androidx.compose.ui.window.ComposeUIViewController
+import platform.Foundation.NSDocumentDirectory
+import platform.Foundation.NSFileManager
+import platform.Foundation.NSURL
+import platform.Foundation.NSUserDomainMask
 
+@kotlinx.cinterop.ExperimentalForeignApi
 fun MainViewController() = ComposeUIViewController {
     val fileManager: NSFileManager = NSFileManager.defaultManager
     val documentsUrl: NSURL = fileManager.URLForDirectory(
@@ -11,5 +16,5 @@ fun MainViewController() = ComposeUIViewController {
         inDomain = NSUserDomainMask,
         error = null
     )!!
-    App(store = getKStore(dir = documentsUrl.path))
+    App(store = getKStore(dir = documentsUrl.path!!))
 }
