@@ -1,73 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc802b0e-cab1-45b6-9529-d9de8711155a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/release.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/build.gradle.kts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/kotlin/io/github/aal337/coffeemoncode/Game.android.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/kotlin/io/github/aal337/coffeemoncode/MainActivity.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/kotlin/io/github/aal337/coffeemoncode/Platform.android.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/drawable/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-anydpi/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-anydpi/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/androidMain/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/composeResources/drawable/compose-multiplatform.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/kotlin/io/github/aal337/coffeemoncode/App.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/kotlin/io/github/aal337/coffeemoncode/Data.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/kotlin/io/github/aal337/coffeemoncode/Game.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/kotlin/io/github/aal337/coffeemoncode/Greeting.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonMain/kotlin/io/github/aal337/coffeemoncode/Platform.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/commonTest/kotlin/io/github/aal337/coffeemoncode/ComposeAppCommonTest.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/iosMain/kotlin/io/github/aal337/coffeemoncode/Game.ios.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/iosMain/kotlin/io/github/aal337/coffeemoncode/MainViewController.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/iosMain/kotlin/io/github/aal337/coffeemoncode/Platform.ios.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/jvmMain/kotlin/io/github/aal337/coffeemoncode/Game.jvm.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/jvmMain/kotlin/io/github/aal337/coffeemoncode/Main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/jvmMain/kotlin/io/github/aal337/coffeemoncode/Platform.jvm.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/wasmJsMain/kotlin/io/github/aal337/coffeemoncode/Game.wasmJs.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/wasmJsMain/kotlin/io/github/aal337/coffeemoncode/Platform.wasmJs.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/wasmJsMain/kotlin/io/github/aal337/coffeemoncode/main.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/wasmJsMain/resources/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/composeApp/src/wasmJsMain/resources/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/Configuration/Config.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/AccentColor.colorset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/AppIcon.appiconset/app-icon-1024.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Assets.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/ContentView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/Preview Content/Preview Assets.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/iosApp/iosApp/iOSApp.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kotlin-js-store/wasm/yarn.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" />
+    <list default="true" id="fc802b0e-cab1-45b6-9529-d9de8711155a" name="Changes" comment="Add serialization plugin">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,9 +63,10 @@
     </system>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="gh-pages" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -174,6 +119,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Gradle.coffeemon-code:composeApp [assemble].executor": "Run",
     "JavaScript Debug.index.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -181,6 +127,7 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "android.gradle.sync.needed": "true",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "gh-pages",
@@ -223,6 +170,9 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\izdih\IdeaProjects\coffeemon-code" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\izdih\IdeaProjects\coffeemon-code" />
     </key>
   </component>
@@ -339,10 +289,24 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/CoffeemonCode/CoffeemonCode.composeApp/build/dist/wasmJs/productionExecutable/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="CoffeemonCode.composeApp.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="CoffeemonCode.composeApp.main" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Gradle.coffeemon-code:composeApp [assemble]" />
+        <item itemvalue="Gradle.coffeemon-code:composeApp [assemble]" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
   </component>
@@ -364,7 +328,7 @@
       <workItem from="1759158899257" duration="995000" />
       <workItem from="1759161655469" duration="1677000" />
       <workItem from="1759163398341" duration="4443000" />
-      <workItem from="1759168896528" duration="2705000" />
+      <workItem from="1759168896528" duration="3085000" />
     </task>
     <task id="LOCAL-00001" summary="Optimize imports in App.kt">
       <option name="closed" value="true" />
@@ -398,7 +362,63 @@
       <option name="project" value="LOCAL" />
       <updated>1759163175300</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create Pages branch with only wasm production executable">
+      <option name="closed" value="true" />
+      <created>1759171723919</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1759171723919</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Create Pages branch with only wasm production executable">
+      <option name="closed" value="true" />
+      <created>1759171796173</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1759171796173</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Import iOS file handling functionality">
+      <option name="closed" value="true" />
+      <created>1759172647162</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1759172647162</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Import iOS file handling functionality">
+      <option name="closed" value="true" />
+      <created>1759172692015</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1759172692015</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Give storeOf a type param GameData">
+      <option name="closed" value="true" />
+      <created>1759172736824</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1759172736824</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Add serialization plugin">
+      <option name="closed" value="true" />
+      <created>1759174921306</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1759174921306</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Add serialization plugin">
+      <option name="closed" value="true" />
+      <created>1759175170839</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1759175170839</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,7 +438,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Optimize imports in App.kt" />
     <MESSAGE value="Make GameMemory properties' accessors suspendable functions and adjust App.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Make GameMemory properties' accessors suspendable functions and adjust App.kt" />
+    <MESSAGE value="Create Pages branch with only wasm production executable" />
+    <MESSAGE value="Import iOS file handling functionality" />
+    <MESSAGE value="Give storeOf a type param GameData" />
+    <MESSAGE value="Add serialization plugin" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add serialization plugin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
