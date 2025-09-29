@@ -2,7 +2,7 @@ name: Release
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   builds:
@@ -20,8 +20,18 @@ jobs:
       - name: Build for all platforms
         run: |
           ./gradlew assemble
-      - name: Add artifacts to release
+      - name: Add Android artifact to release
         uses: svenstaro/upload-release-action@v2
         with:
+          file: composeApp/build/outputs/apk/release/*.apk
           file_glob: true
-          file: ssh # TODO: pattern for binaries
+      - name: Add Desktop artifact to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: composeApp/build/libs/*-jvm.jar
+          file_glob: true
+      - name: Add iOS artifacts to release
+        uses: svenstaro/upload-release-action@v2
+        with:
+          file: composeApp/build/bin/native/releaseFramework/*.* # whatever, apple bad
+          file_glob: true
