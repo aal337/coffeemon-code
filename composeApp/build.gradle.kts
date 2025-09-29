@@ -10,6 +10,7 @@ plugins {
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
     alias(libs.plugins.composeHotReload)
+    alias(libs.plugins.kotlinSerialization)
 }
 
 kotlin {
@@ -92,7 +93,7 @@ kotlin {
             implementation(libs.kotlinx.coroutinesSwing)
             implementation(libs.ktor.client.apache5)
             implementation(libs.kstore.file)
-            implementation("net.harawata:appdirs:1.4.0")
+            implementation(libs.appdirs)
         }
         wasmJsMain.dependencies {
             implementation(libs.ktor.client.js)
