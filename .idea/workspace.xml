@@ -9,10 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fc802b0e-cab1-45b6-9529-d9de8711155a" name="Changes" comment="Add serialization plugin">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="fc802b0e-cab1-45b6-9529-d9de8711155a" name="Changes" comment="Add serialization plugin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -66,7 +63,7 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gh-pages" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -304,8 +301,8 @@
       <list>
         <item itemvalue="JavaScript Debug.index.html" />
         <item itemvalue="Gradle.coffeemon-code:composeApp [assemble]" />
-        <item itemvalue="Gradle.coffeemon-code:composeApp [assemble]" />
         <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Gradle.coffeemon-code:composeApp [assemble]" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
