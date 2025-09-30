@@ -7,7 +7,11 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 @Serializable
-data class Response(val total_seconds: Int)
+data class Response(@Suppress("PropertyName") val total_seconds: Int)
+
+private val json = Json {
+    ignoreUnknownKeys = true
+}
 
 suspend fun getTime(username: String): Int {
     return json.decodeFromString<Response>(
