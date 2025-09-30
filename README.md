@@ -1,13 +1,24 @@
-This is a Kotlin Multiplatform project targeting Android, Desktop (JVM).
+# Coffeemon Code
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
+Coffeemon Code is a game in which you catch Coffeemon. The more time you spend coding, the more you can catch.
 
+## Limitations
+Progress is lost when the app is closed (at least on web).
 
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+## Installation
+
+### Android
+Download the APK from the release and install it.
+
+### Web
+Go to https://io.github.aal337/coffeemon-code/.
+
+### Desktop
+Download the JAR from the release and run it with `java -jar <path-to-jar>`.
+Requires Java (https://jdk.java.net/25/).
+
+### iOS
+Not officially. But see what you can do with a Max and Xcode (maybe there are even some useful files in the release).
+
+## How to play
+Input your Hackatime username and tap the button ("Catch one!").
