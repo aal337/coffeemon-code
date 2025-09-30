@@ -11,9 +11,7 @@ import io.ktor.client.engine.*
 data class Response(val total_seconds: Int)
 
 suspend fun getTime(username: String): Int {
-    return Json {
-        ignoreUnknownKeys = true
-    }.decodeFromString<Response>(
+    return json.decodeFromString<Response>(
         HttpClient(getPlatform().httpEngine).get(
             "https://hackatime.hackclub.com/api/v1/users/$username/stats"
         ).body<String>()
