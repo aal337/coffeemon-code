@@ -10,12 +10,12 @@ import io.ktor.client.engine.*
 @Serializable
 data class Response(val total_seconds: Int)
 
-suspend fun getTime(user: String): Int {
+suspend fun getTime(username: String): Int {
     return Json {
         ignoreUnknownKeys = true
     }.decodeFromString<Response>(
         HttpClient(getPlatform().httpEngine).get(
-            "https://api.hackatime.hackclub.com/api/v1/users/$user/stats"
+            "https://hackatime.hackclub.com/api/v1/users/$username/stats"
         ).body<String>()
     ).total_seconds
 }
