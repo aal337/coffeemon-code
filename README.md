@@ -11,7 +11,7 @@ Progress is lost when the app is closed (at least on web).
 Download the APK from the release and install it.
 
 ### Web
-Go to https://io.github.aal337/coffeemon-code/.
+Go to https://aal337.github.io/coffeemon-code/.
 
 ### Desktop
 Download the JAR from the release and run it with `java -jar <path-to-jar>`.
