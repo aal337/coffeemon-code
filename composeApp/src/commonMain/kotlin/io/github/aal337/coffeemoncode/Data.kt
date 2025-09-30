@@ -7,7 +7,10 @@ import kotlinx.serialization.Serializable
 import kotlinx.serialization.json.Json
 
 @Serializable
-data class Response(@Suppress("PropertyName") val total_seconds: Int)
+data class Response(val data: Data)
+
+@Serializable
+data class Data(@Suppress("PropertyName") val total_seconds: Int)
 
 private val json = Json {
     ignoreUnknownKeys = true
@@ -18,5 +21,5 @@ suspend fun getTime(username: String): Int {
         HttpClient(getPlatform().httpEngine).get(
             "https://hackatime.hackclub.com/api/v1/users/$username/stats"
         ).body<String>()
-    ).total_seconds
+    ).data.total_seconds
 }
