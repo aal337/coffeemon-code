@@ -22,3 +22,6 @@ Not officially. But see what you can do with a Max and Xcode (maybe there are ev
 
 ## How to play
 Input your Hackatime username and tap the button ("Catch one!").
+
+## License
+License found in LICENSE.txt applies. Next to the binaries, you'll find more licenses. Those in ios.zip are from 3rd-party code that is contained in the would-be iOS app, kstore_LICENCE.txt for all platforms.
