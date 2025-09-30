@@ -1,11 +1,8 @@
 package io.github.aal337.coffeemoncode
 
-import androidx.compose.animation.AnimatedVisibility
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.safeContentPadding
 import androidx.compose.material3.Button
 import androidx.compose.material3.MaterialTheme
@@ -14,16 +11,19 @@ import androidx.compose.material3.TextField
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import coffeemoncode.composeapp.generated.resources.Res
-import coffeemoncode.composeapp.generated.resources.compose_multiplatform
 import io.github.xxfast.kstore.KStore
 import kotlinx.coroutines.launch
-import org.jetbrains.compose.resources.painterResource
 
 @Composable
 fun App(store: KStore<GameData>) {
     MaterialTheme {
         val game = GameMemory(store)
+        val coroutineScope = rememberCoroutineScope()
+        var alreadyPlayed by remember { mutableStateOf(run {
+            var game: GameData? = null
+            coroutineScope.launch { game = store.get() }
+            game != null
+        }) }
         var showContent by remember { mutableStateOf(false) }
         Column(
             modifier = Modifier
@@ -33,19 +33,19 @@ fun App(store: KStore<GameData>) {
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             var seconds: Int? by remember { mutableStateOf(null) }
-            Button(onClick = { showContent = !showContent }) {
-                Text("Click me!")
-            }
-            AnimatedVisibility(showContent) {
-                val greeting = remember { Greeting().greet() }
-                Column(
-                    modifier = Modifier.fillMaxWidth(),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                ) {
-                    Image(painterResource(Res.drawable.compose_multiplatform), null)
-                    Text("Compose: $greeting")
-                }
-            }
+//            Button(onClick = { showContent = !showContent }) {
+//                Text("Click me!")
+//            }
+//            AnimatedVisibility(showContent) {
+//                val greeting = remember { Greeting().greet() }
+//                Column(
+//                    modifier = Modifier.fillMaxWidth(),
+//                    horizontalAlignment = Alignment.CenterHorizontally,
+//                ) {
+//                    Image(painterResource(Res.drawable.compose_multiplatform), null)
+//                    Text("Compose: $greeting")
+//                }
+//            }
 
             var inputFieldText by remember { mutableStateOf("") }
             val coroutineScope = rememberCoroutineScope()
