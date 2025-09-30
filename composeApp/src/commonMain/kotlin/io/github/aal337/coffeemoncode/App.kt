@@ -48,7 +48,6 @@ fun App(store: KStore<GameData>) {
 //            }
 
             var inputFieldText by remember { mutableStateOf("") }
-            val coroutineScope = rememberCoroutineScope()
 
             TextField(
                 value = inputFieldText,
@@ -63,21 +62,30 @@ fun App(store: KStore<GameData>) {
             }) {
                 Text("Get time")
             }
-            if (seconds != null) {
-                Text(seconds.toString())
+            var catchable: Int by remember { mutableStateOf(0) }
+            if (catchable == 0) {
+                coroutineScope.launch {
+                    catchable = ((seconds ?: 0) / 1800) - (game.getCoffeemonNumber() ?: 0)
+                }
             }
-            // var alreadyCaught by remember { mutableStateOf(0) }
-            var catchable by remember { mutableStateOf(0) }
-            coroutineScope.launch { catchable = ((seconds ?: 0) / 1800) - (game.getCoffeemonNumber() ?: 0) }
             if (catchable < 0) {
                 Text("You have too many Coffeemon, some will run away!")
                 coroutineScope.launch { game.setCoffeemonNumber((game.getCoffeemonNumber() ?: 0) + catchable) }
             }
             Text("Hackatime time: ${seconds ?: 0} seconds")
+            var coffeemonNumber by remember { mutableStateOf(0) }
+            // coroutineScope.launch { coffeemonNumber = game.getCoffeemonNumber() ?: 0 }
             Text("That's $catchable Coffeemon catchable!")
-            Button(onClick = { coroutineScope.launch { game.setCoffeemonNumber((game.getCoffeemonNumber() ?: 0) + 1) } }) {
+            Button(onClick = {
+                if (catchable > 0) {
+                    coroutineScope.launch { game.setCoffeemonNumber((game.getCoffeemonNumber() ?: 0) + 1) }
+                    catchable--
+                    coffeemonNumber++
+                }
+            }) {
                 Text("Catch one!")
             }
+            Text("You have caught $coffeemonNumber Coffeemon")
         }
     }
 }
